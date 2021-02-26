@@ -1,0 +1,4 @@
+prototype(NeosRulez.InlineSVG:Class.SVGFusion) {
+    @class = 'NeosRulez\\InlineSVG\\Fusion\\SVGFusion'
+    svgFile = false
+}

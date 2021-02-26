@@ -1,0 +1,6 @@
+prototype(NeosRulez.InlineSVG:Component.InlineSVG) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <NeosRulez.InlineSVG:Component.SVGTag />
+    `
+}

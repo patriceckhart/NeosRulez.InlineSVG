@@ -1,0 +1,17 @@
+// <NeosRulez.InlineSVG:Component.SVGTag image={asset} identifier="yourUniqueIdentifier" width="500" />
+prototype(NeosRulez.InlineSVG:Component.SVGTag) < prototype(Neos.Fusion:Component) {
+    identifier = ${'inline__svg__' + node.identifier}
+    @context.image = ${node.properties.image ? node.properties.image : this.image ? this.image : false}
+    imageUri = Neos.Neos:ImageUri {
+        asset = ${image}
+    }
+    width = ${node.properties.width}
+    inlineStyle = ${this.width ? '<style> #' + this.identifier + ' { width: ' + this.width + 'px; max-width: ' + this.width + 'px; height:auto; }  </style>' : false}
+
+    renderer = afx`
+        {props.inlineStyle}
+        <div id={props.identifier} class="neosrulez-inline-svg">
+            <NeosRulez.InlineSVG:Class.SVGFusion svgFile={props.imageUri} />
+        </div>
+    `
+}

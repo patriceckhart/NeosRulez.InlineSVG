@@ -1,0 +1,37 @@
+'NeosRulez.InlineSVG:Content.InlineSVG':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'SVG'
+    group: general
+    position: 'after Neos.NodeTypes:Image'
+    icon: fas fa-draw-polygon
+    inspector:
+      groups:
+        inlineSVG:
+          label: 'SVG'
+          icon: fas fa-draw-polygon
+  properties:
+    image:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'SVG'
+        inspector:
+          group: inlineSVG
+          editorOptions:
+            features:
+              crop: false
+              resize: false
+              upload: false
+            constraints:
+              mediaTypes: [ 'image/svg' ]
+    width:
+      type: string
+      ui:
+        label: i18n
+        inspector:
+          group: inlineSVG
+          position: 'after image'
+          editorOptions:
+            placeholder: 'auto'
+            maxlength: 4

@@ -1,0 +1,11 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.InlineSVG: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.InlineSVG:
+            - 'NodeTypes/*'
+            - 'NodeTypes/Content/*'
