@@ -15,7 +15,10 @@ composer require neosrulez/inlinesvg
 ## Usage as component in fusion
 
 ```
-    <NeosRulez.InlineSVG:Component.SVGTag image={asset} identifier="yourUniqueIdentifier" width="500" />
+<NeosRulez.InlineSVG:Component.SVGTag 
+   image={asset} 
+   identifier="yourUniqueIdentifier" 
+   width="500" />
 ```
 
 ## Author
