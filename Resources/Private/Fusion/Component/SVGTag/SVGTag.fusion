@@ -14,4 +14,15 @@ prototype(NeosRulez.InlineSVG:Component.SVGTag) < prototype(Neos.Fusion:Componen
             <NeosRulez.InlineSVG:Class.SVGFusion svgFile={props.imageUri} />
         </div>
     `
+    @cache {
+        mode = 'cached'
+        maximumLifetime = '86400'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(documentNode)}
+            2 = ${Neos.Caching.descendantOfTag(documentNode)}
+        }
+    }
 }
