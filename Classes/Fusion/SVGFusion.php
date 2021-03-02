@@ -13,7 +13,8 @@ class SVGFusion extends AbstractFusionObject {
         $result = false;
         $svgFile = $this->fusionValue('svgFile');
         if($svgFile) {
-            $fileContent = file_get_contents($svgFile);
+            $relativeFile = parse_url($svgFile);
+            $fileContent = file_get_contents(constant('FLOW_PATH_ROOT') . 'Web' . $relativeFile['path']);
             $result = strstr($fileContent, '<svg');
         }
         return $result;
